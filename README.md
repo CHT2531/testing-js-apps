@@ -64,7 +64,7 @@ Add some additional tests for the *hasPassed()* function e.g. passing a value of
 
 There is quite a lot of setting up to do here, so follow these steps carefully. 
 
-* *Nightwatch.js* is a Node.js application. First, in the root of the project folder, declare this is a Node.js project
+* *Nightwatch.js* is a Node.js application. First, in the root of the project  folder(where the README.md file is), declare this is a Node.js project
 
 ```
 npm init -y
@@ -113,7 +113,7 @@ npm install chromedriver
       "desiredCapabilities": {
         "browserName": "chrome"
       }
-    },
+    }
   }
 }
 ```
@@ -139,10 +139,9 @@ module.exports = {
 You can read about these settings at http://nightwatchjs.org/gettingstarted#chromedriver. However, both of the these files will be the same every time we do this. 
 
 * Finally we can actually write the tests. 
-* Create a new javaScript file, *tests.js*. 
+* Create a new javaScript file, *tests.js*. Save it in the *e2e-tests* folder.
 * Add the following code
 * Change the URL so that it points at your *index.html* page. 
-* Save it in the *tests* folder
 
 ```
 module.exports = {
@@ -162,7 +161,7 @@ module.exports = {
 ```
 To run the tests:
 ```
-nightwatch tests/test1.js
+nightwatch e2e-tests/tests.js
 ```
 * The browser should open and a value of 70 get entered into the text box
 * In the Command Prompt you should get feedback that you have passed the tests. 
